@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "dev": "umi dev",
+    "build": "umi build"
+  },
+  "dependencies": {
+    "@jimengio/rex": "^0.1.4",
+    "antd": "^3.19.5",
+    "dayjs": "^1.8.15",
+    "emotion": "^10.0.14",
+    "immer": "^3.2.0",
+    "lodash": "^4.17.15",
+    "memoize-one": "^5.0.5",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-container-query": "^0.11.0",
+    "react-dom": "^16.8.6",
+    "react-media": "^1.9.2",
+    "use-immer": "^0.3.3"
+  },
+  "devDependencies": {
+    "@types/memoize-one": "^4.1.1",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "tslint": "^5.12.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "umi": "^2.7.0",
+    "umi-plugin-react": "^1.8.0",
+    "umi-types": "^0.3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

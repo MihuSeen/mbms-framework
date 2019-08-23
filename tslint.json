@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint-react", "tslint-eslint-rules"],
+  "rules": {
+    "eofline": false,
+    "no-console": true,
+    "no-construct": true,
+    "no-debugger": true,
+    "no-reference": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false
+  }
+}
