@@ -85,9 +85,9 @@ yarn build
     ├── layouts/                   // 全局布局
         ├── index.tsx              // 路由鉴权
         ├── layout/                // 一级路由名
+            ├── components         // 组件
             ├── index.tsx          // 布局
             ├── style.ts           // 样式
-            ├── components         // 组件
     ├── locales                    // 多语言配置
         ├── zh-CN.ts               // 语言名称
         ├── zh-CN                  // 具体模块
@@ -96,9 +96,10 @@ yarn build
         ├── .umi                   // Dev 临时目录
         ├── .umi-production        // Build 临时目录
         ├── page/                  // 页面名
+            ├── components         // 组件
             ├── index.tsx          // 布局
             ├── style.ts           // 样式
-            ├── components         // 组件
+    ├── styles                     // 公共样式
     ├── utils                      // 工具集
     ├── app.ts                     // 运行时配置
     ├── global.css                 // 全局样式
