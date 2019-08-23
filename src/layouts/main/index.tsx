@@ -77,7 +77,7 @@ const Main: React.FC<IProps> = props => {
 
   const flatMenuKeys = getFlatMenuKeys(menuData);
 
-  const [baseState, SetBaseState] = useImmer<IState>({ collapsed: false });
+  const [baseState, SetBaseState] = useImmer<IState>({ collapsed: true });
 
   useEffect(() => {
     updataMenuData(routes, currentAuthority);

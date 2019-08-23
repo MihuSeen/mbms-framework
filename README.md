@@ -73,8 +73,6 @@ yarn build
     ├── theme.ts                   // Theme 配置
     ├── webpack.ts                 // Webpack 配置
 ├── dist                           // Build 目录
-├── hooks                          // CI 配置
-├── images                         // README 图片资源
 ├── public                         // Favicon 资源
 └── src/                           // 项目源码
     ├── apis                       // Api 请求
@@ -89,6 +87,7 @@ yarn build
         ├── layout/                // 一级路由名
             ├── index.tsx          // 布局
             ├── style.ts           // 样式
+            ├── components         // 组件
     ├── locales                    // 多语言配置
         ├── zh-CN.ts               // 语言名称
         ├── zh-CN                  // 具体模块
@@ -99,6 +98,7 @@ yarn build
         ├── page/                  // 页面名
             ├── index.tsx          // 布局
             ├── style.ts           // 样式
+            ├── components         // 组件
     ├── utils                      // 工具集
     ├── app.ts                     // 运行时配置
     ├── global.css                 // 全局样式
@@ -146,7 +146,7 @@ icon name path title redirect component routes authority hideInMenu
 
 ```
 
-## Commit Message 规范
+## Commit message 规范
 
 格式(<>内为必需, []内为非必需):
 
@@ -187,4 +187,6 @@ api, component, layout, model 等
 
 subject: 概述
 
-## 术语表
+## License
+
+MIT

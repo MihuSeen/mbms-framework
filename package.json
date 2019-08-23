@@ -1,22 +1,16 @@
 {
+  "name": "mbms-frameflow",
+  "description": "Medium and back management system framework",
+  "keywords": [],
+  "author": "MihuSeen",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
     "dev": "umi dev",
     "build": "umi build"
-  },
-  "dependencies": {
-    "@jimengio/rex": "^0.1.4",
-    "antd": "^3.19.5",
-    "dayjs": "^1.8.15",
-    "emotion": "^10.0.14",
-    "immer": "^3.2.0",
-    "lodash": "^4.17.15",
-    "memoize-one": "^5.0.5",
-    "normalize.css": "^8.0.1",
-    "react": "^16.8.6",
-    "react-container-query": "^0.11.0",
-    "react-dom": "^16.8.6",
-    "react-media": "^1.9.2",
-    "use-immer": "^0.3.3"
   },
   "devDependencies": {
     "@types/memoize-one": "^4.1.1",
@@ -36,7 +30,19 @@
     "umi-plugin-react": "^1.8.0",
     "umi-types": "^0.3.0"
   },
-  "engines": {
-    "node": ">=8.0.0"
+  "dependencies": {
+    "@jimengio/rex": "^0.1.4",
+    "antd": "^3.22.0",
+    "dayjs": "^1.8.15",
+    "emotion": "^10.0.14",
+    "immer": "^3.2.0",
+    "lodash": "^4.17.15",
+    "memoize-one": "^5.0.5",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-container-query": "^0.11.0",
+    "react-dom": "^16.8.6",
+    "react-media": "^1.9.2",
+    "use-immer": "^0.3.3"
   }
 }

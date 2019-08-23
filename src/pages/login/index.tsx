@@ -1,11 +1,12 @@
 import React from "react";
+import { useImmer } from "use-immer";
 
-import { Card } from "antd";
+import AuthContainer from "@/components/auth-container";
 
 import Style from "./style";
 
 const Login: React.FC = () => {
-  return <Card className={Style.content}>login</Card>;
+  return <AuthContainer title={"登陆"} />;
 };
 
 export default Login;

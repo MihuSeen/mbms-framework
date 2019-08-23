@@ -18,7 +18,7 @@ export default {
 
   container: css`
     width: 100vw;
-    height: 600px;
+    height: 700px;
     max-width: 1600px;
     display: flex;
     align-items: center;
@@ -29,18 +29,20 @@ export default {
     @media (max-width: 1333px) {
       display: none;
     }
-    width: 575px;
+    width: 700px;
     height: 100%;
     background: url(${background}) center no-repeat;
     background-size: contain;
   `,
 
   form: css`
-    @media (max-width: 575px) {
-      width: 90%;
+    @media (max-width: 600px) {
+      width: 100%;
     }
     height: 100%;
-    width: 575px;
-    border: #fff solid 1px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `,
 };

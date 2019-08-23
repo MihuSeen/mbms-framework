@@ -13,7 +13,6 @@ import { Menu, Icon, Empty } from "antd";
 const { SubMenu, Item } = Menu;
 
 import Style from "./style";
-import ILang from "@/models/lang";
 
 interface IProps {
   pathname: string;
@@ -78,12 +77,12 @@ const BaseMenu: React.FC<IProps> = props => {
     };
   }
 
-  const getNavMenuItems = (menusData: ExRoute[]) => {
-    if (!menusData) {
-      return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />;
+  const getNavMenuItems = (menuData: ExRoute[]) => {
+    if (menuData == null || menuData.length == 0) {
+      return [];
     }
 
-    return menusData
+    return menuData
       .filter(item => item.name && !item.hideInMenu)
       .map(item => getSubMenuOrItem(item))
       .filter(item => item);

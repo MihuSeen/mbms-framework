@@ -1,5 +1,4 @@
-import React, { Suspense } from "react";
-
+import React from "react";
 import Link from "umi/link";
 import { Layout, Drawer } from "antd";
 
@@ -7,7 +6,6 @@ import lang from "@/utils/lang";
 
 import { ExRoute } from "@/models/route";
 
-import DynamicLoading from "@/components/dynamic-loading";
 import BaseMenu from "./base-menu";
 
 import logo from "@/assets/logo.svg";
@@ -35,16 +33,17 @@ const SiderMenu: React.FC<IProps> = props => {
       trigger={null}
       breakpoint="lg"
       collapsible={true}
+      collapsed={collapsed}
       className={Style.sider}
-      collapsed={isMobile ? false : collapsed}
+      onCollapse={collapse => {
+        !isMobile && onCollapse(collapse);
+      }}
     >
       <Link to="/main" className={Style.logo}>
         <img className={Style.img} src={logo} alt="logo" />
         <h1 className={Style.title}>{lang("title.main")}</h1>
       </Link>
-      <Suspense fallback={<DynamicLoading />}>
-        <BaseMenu {...props} />
-      </Suspense>
+      <BaseMenu {...props} />
     </Sider>
   );
 
