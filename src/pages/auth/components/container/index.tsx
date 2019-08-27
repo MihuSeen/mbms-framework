@@ -8,7 +8,7 @@ interface IProps {
   title: string;
 }
 
-const AuthContainer: React.FC<IProps> = props => {
+const Container: React.FC<IProps> = props => {
   const { title, children } = props;
 
   return (
@@ -30,4 +30,4 @@ const AuthContainer: React.FC<IProps> = props => {
   );
 };
 
-export default AuthContainer;
+export default Container;

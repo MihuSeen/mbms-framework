@@ -77,14 +77,14 @@ const Main: React.FC<IProps> = props => {
 
   const flatMenuKeys = getFlatMenuKeys(menuData);
 
-  const [baseState, SetBaseState] = useImmer<IState>({ collapsed: true });
+  const [state, setState] = useImmer<IState>({ collapsed: true });
 
   useEffect(() => {
     updataMenuData(routes, currentAuthority);
   }, []);
 
   const setCollapsed = (value: boolean) => {
-    SetBaseState(draft => {
+    setState(draft => {
       draft.collapsed = value;
     });
   };
@@ -92,7 +92,7 @@ const Main: React.FC<IProps> = props => {
   const getContentPaddingLeft = (isMobile: boolean) => {
     if (!isMobile) {
       return {
-        paddingLeft: baseState.collapsed ? "80px" : "256px",
+        paddingLeft: state.collapsed ? "80px" : "256px",
       };
     }
     return null;
@@ -112,7 +112,7 @@ const Main: React.FC<IProps> = props => {
                     isMobile={isMobile}
                     onCollapse={setCollapsed}
                     flatMenuKeys={flatMenuKeys}
-                    collapsed={baseState.collapsed}
+                    collapsed={state.collapsed}
                   />
                   <Layout
                     style={{
@@ -123,7 +123,7 @@ const Main: React.FC<IProps> = props => {
                     <GlobalHeader
                       isMobile={isMobile}
                       onCollapse={setCollapsed}
-                      collapsed={baseState.collapsed}
+                      collapsed={state.collapsed}
                     />
                     <Content className={Style.content}>{children}</Content>
                   </Layout>

@@ -8,7 +8,7 @@ import lang from "@/utils/lang";
 
 import { ExRoute } from "@/models/route";
 
-import { Menu, Icon, Empty } from "antd";
+import { Menu, Icon } from "antd";
 
 const { SubMenu, Item } = Menu;
 
@@ -37,10 +37,10 @@ const BaseMenu: React.FC<IProps> = props => {
     flatMenuKeys,
   } = props;
 
-  const [baseState, SetBaseState] = useImmer<IState>({});
+  const [state, setState] = useImmer<IState>({});
 
   useEffect(() => {
-    SetBaseState(draft => {
+    setState(draft => {
       draft.openKeys = getDefaultCollapsedSubMenus(flatMenuKeys, pathname);
     });
   }, [flatMenuKeys]);
@@ -55,25 +55,23 @@ const BaseMenu: React.FC<IProps> = props => {
     const moreThanOne =
       openKeys.filter(openKey => isMainMenu(openKey)).length > 1;
 
-    SetBaseState(draft => {
+    setState(draft => {
       draft.openKeys = moreThanOne ? [openKeys.pop()] : [...openKeys];
     });
   };
 
   let selectedKeys = getSelectedMenuKeys(flatMenuKeys, pathname);
 
-  if (!selectedKeys.length && baseState.openKeys) {
-    selectedKeys = [baseState.openKeys[baseState.openKeys.length - 1]];
+  if (!selectedKeys.length && state.openKeys) {
+    selectedKeys = [state.openKeys[state.openKeys.length - 1]];
   }
 
   let defaultProps = {};
 
-  if (baseState.openKeys && !collapsed) {
+  if (state.openKeys && !collapsed) {
     defaultProps = {
       openKeys:
-        baseState.openKeys.length === 0
-          ? [...selectedKeys]
-          : baseState.openKeys,
+        state.openKeys.length === 0 ? [...selectedKeys] : state.openKeys,
     };
   }
 
@@ -94,7 +92,7 @@ const BaseMenu: React.FC<IProps> = props => {
       !item.hideChildrenInMenu &&
       item.children.some(child => child.name)
     ) {
-      const name = lang(item.name);
+      const name = lang(item.name as any);
 
       return (
         <SubMenu
@@ -138,8 +136,8 @@ const BaseMenu: React.FC<IProps> = props => {
 
   const getMenuItemPath = (item: ExRoute) => {
     const itemPath = conversionPath(item.path);
+    const name = lang(item.name as any);
     const icon = getIcon(item.icon);
-    const name = lang(item.name);
 
     if (isUrl(itemPath)) {
       return (
