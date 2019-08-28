@@ -2,7 +2,7 @@ import React from "react";
 import Link from "umi/link";
 import { Layout, Drawer } from "antd";
 
-import lang from "@/utils/lang";
+import { lang } from "@/utils/lang";
 
 import { ExRoute } from "@/models/route";
 

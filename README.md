@@ -77,28 +77,31 @@ yarn build
 └── src/                           // 项目源码
     ├── apis                       // Api 请求
     ├── assets                     // 静态资源
-    ├── components                 // 公共组件
+    ├── components/                // 全局公共组件
         ├── component/             // 组件名
-            ├── index.tsx          // 布局
-            ├── style.ts           // 样式
+            ├── index.tsx          // 组件布局
+            ├── style.ts           // 组件样式
     ├── controllers                // Store 控制器
     ├── layouts/                   // 全局布局
-        ├── index.tsx              // 路由鉴权
-        ├── layout/                // 一级路由名
-            ├── components         // 组件
+        ├── layout/                // 布局名
+            ├── components         // 公共组件
             ├── index.tsx          // 布局
             ├── style.ts           // 样式
-    ├── locales                    // 多语言配置
-        ├── zh-CN.ts               // 语言名称
+    ├── locales/                   // 多语言配置
         ├── zh-CN                  // 具体模块
+        ├── zh-CN.ts               // 语言名称
     ├── models                     // 类型定义
     ├── pages/                     // 页面布局
         ├── .umi                   // Dev 临时目录
         ├── .umi-production        // Build 临时目录
-        ├── page/                  // 页面名
-            ├── components         // 组件
-            ├── index.tsx          // 布局
-            ├── style.ts           // 样式
+        ├── router/                // 一级路由名
+            ├── components         // 公共组件
+            ├── router/            // 二级路由名
+                ├── components     // 公共组件
+                ├── index.tsx      // 布局
+                ├── style.ts       // 样式
+        ├── document.ejs           // HTML 模版
+        ├── index.tsx              // 路由鉴权
     ├── styles                     // 公共样式
     ├── utils                      // 工具集
     ├── app.ts                     // 运行时配置
@@ -127,7 +130,7 @@ interface ExRoute {
 }
 ```
 
-`auth` 路由下为登陆相关页面
+`auth` 路由下为登录相关页面
 
 `main` 路由下为主要页面, 其子路由仅可设置以下参数
 
@@ -137,7 +140,7 @@ icon name path title redirect component routes authority hideInMenu
 
 且非一级路由不可设置 `icon` , 叶子路由才可设置 `title`
 
-`hideInMenu: true` 情况下 `icon` 不可设置
+`hideInMenu: true` 情况下 `icon` `name` 不可设置
 
 `redirect` 仅可与 `path` 共存
 
@@ -190,4 +193,4 @@ subject: 概述
 
 ## License
 
-MIT
+[MIT](./LICENSE)

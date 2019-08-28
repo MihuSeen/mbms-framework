@@ -1,5 +1,5 @@
 export default {
-  "title.login": "登陆",
+  "title.login": "登录",
   "title.register": "注册",
   "title.forgot": "找回密码",
   "title.reset": "重置密码",

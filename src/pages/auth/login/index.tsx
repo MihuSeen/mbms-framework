@@ -6,7 +6,7 @@ import Container from "@/pages/auth/components/container";
 import Style from "./style";
 
 const Login: React.FC = () => {
-  return <Container title={"登陆"} />;
+  return <Container title={"登录"} />;
 };
 
 export default Login;

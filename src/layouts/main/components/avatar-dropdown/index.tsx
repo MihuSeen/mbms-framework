@@ -3,7 +3,7 @@ import React from "react";
 import { Avatar, Menu, Icon } from "antd";
 import HeaderDropdown from "../header-dropdown";
 
-import lang from "@/utils/lang";
+import { lang } from "@/utils/lang";
 
 import Style from "./style";
 

@@ -22,6 +22,7 @@ export default {
 
   img: css`
     width: 32px;
+    height: 32px;
     display: inline-block;
     vertical-align: middle;
   `,
@@ -33,7 +34,7 @@ export default {
     padding: 22px 24px;
     transition: all 0.2s;
 
-    &:hover {
+    :hover {
       background: rgba(0, 0, 0, 0.025);
     }
   `,

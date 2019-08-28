@@ -4,7 +4,7 @@ import Link from "umi/link";
 
 import { getDefaultCollapsedSubMenus, getSelectedMenuKeys } from "@/utils/menu";
 import { isUrl, conversionPath } from "@/utils/url";
-import lang from "@/utils/lang";
+import { lang } from "@/utils/lang";
 
 import { ExRoute } from "@/models/route";
 

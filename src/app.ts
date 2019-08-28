@@ -28,7 +28,7 @@ export function patchRoutes(routes: ExRoute[]) {
   // });
 }
 
-// 自定义 render，比如在 render 前做权限校验
+// 自定义 render, 比如在 render 前做权限校验
 export function render(oldRender: Function) {
   oldRender();
   //setTimeout(oldRender, 1000);

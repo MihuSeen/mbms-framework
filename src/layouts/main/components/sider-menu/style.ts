@@ -28,6 +28,7 @@ export default {
   `,
 
   img: css`
+    width: 32px;
     height: 32px;
     display: inline-block;
     vertical-align: middle;

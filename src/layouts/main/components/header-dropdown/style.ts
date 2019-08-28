@@ -16,11 +16,11 @@ export default {
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
-    & .anticon {
+    .anticon {
       margin-right: 8px;
     }
 
-    & .ant-dropdown-menu-item {
+    .ant-dropdown-menu-item {
       min-width: 120px;
     }
   `,
@@ -34,7 +34,7 @@ export default {
     vertical-align: top;
     display: inline-block;
 
-    &:hover {
+    :hover {
       background: rgba(0, 0, 0, 0.025);
     }
 
@@ -50,7 +50,7 @@ export default {
       top: -1px;
     }
 
-    & .opened {
+    .opened {
       background: rgba(0, 0, 0, 0.025);
     }
   `,

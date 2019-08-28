@@ -22,7 +22,7 @@ const plugins: IPlugin[] = [
       },
       pwa: false,
       title: {
-        defaultTitle: "handle",
+        defaultTitle: "mbms",
         format: "{current}{separator}{parent}",
         separator: " - ",
         useLocale: true,
